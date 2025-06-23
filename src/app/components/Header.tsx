@@ -4,7 +4,6 @@ import {
   Box,
   Flex,
   Text,
-  Button,
   IconButton,
   HStack,
   Drawer,
