@@ -4,111 +4,101 @@ import {
   Box,
   Text,
   SimpleGrid,
-  IconButton,
   Flex,
   Heading,
 } from '@chakra-ui/react';
-import { IoArrowRedoCircleSharp } from 'react-icons/io5';
-import {
-  MdLocationOn,
-  MdMap,
-  MdPoll,
-  MdDashboard,
-} from 'react-icons/md';
+import Image from 'next/image';
 
-const apps = [
-  {
-    title: 'Local Perspective',
-    description: 'Configure apps to provide focused citizen experiences',
-    icon: MdLocationOn,
-  },
-  {
-    title: 'Story Maps',
-    description: 'Tell stories about local issues and solutions.',
-    icon: MdMap,
-  },
-  {
-    title: 'Survey 123',
-    description: 'Hear from your community.',
-    icon: MdPoll,
-  },
-  {
-    title: 'Ops Dashboard',
-    description: 'Monitor your data',
-    icon: MdDashboard,
-  },
+const mobileImages = [
+  '/static/mobile/mobile1.png',
+  '/static/mobile/mobile2.png',
+  '/static/mobile/mobile3.png',
+  '/static/mobile/mobile4.png',
+  '/static/mobile/mobile5.png',
 ];
 
 export default function ApplicationSections() {
   return (
-    <Box bg="white" py={20} px={{ base: 4, md: 12 }}>
-      <Box textAlign="center" mb={12}>
-        <Text fontSize="lg" color="green.700" mb={2}>
-          Aplikasi
-        </Text>
+    <Box bg="white" py={20} px={{ base: 4, md: 12 }} position="relative" overflow="hidden">
+      <Box
+        position="absolute"
+        left={0}
+        top={0}
+        height="100%"
+        width="auto"
+        zIndex={0}
+      >
+        <Image
+          src="/static/images/kelaparight.png"
+          alt="Kelapa Left"
+          width={500}
+          height={600}
+          style={{
+            objectFit: 'contain',
+            transform: 'scaleX(-1)',
+          }}
+        />
+      </Box>
+
+      <Box
+        position="absolute"
+        right={0}
+        top={0}
+        height="100%"
+        width="auto"
+        zIndex={0}
+      >
+        <Image
+          src="/static/images/kelaparight.png"
+          alt="Kelapa Right"
+          width={500}
+          height={600}
+          style={{ objectFit: 'contain' }}
+        />
+      </Box>
+
+      <Box textAlign="center" mb={12} position="relative" zIndex={1}>
         <Heading
           as="h2"
           fontSize={{ base: '2xl', md: '4xl' }}
           fontWeight="extrabold"
           color="green.900"
         >
-          Aplikasi Bermanfaat untuk Mendukung Tujuan Anda
+          Mobile GIS PTPTN IV
         </Heading>
+        <Text fontSize="xl" color="green.700" mb={2}>
+          dapat di download di Playstore untuk kegiatan survey, tracking, dan monitoring kelapa sawit melalui smartphone.
+        </Text>
       </Box>
 
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8}>
-        {apps.map(({ title, description, icon: Icon }) => (
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 5 }} spacing={8} position="relative" zIndex={1}>
+        {mobileImages.map((src, idx) => (
           <Box
-            key={title}
+            key={idx}
             bg="#FDFCFB"
             borderRadius="2xl"
-            p={8}
+            p={1}
             position="relative"
             boxShadow="sm"
             transition="all 0.3s"
             _hover={{ boxShadow: 'lg', transform: 'translateY(-4px)' }}
           >
             <Flex
-              w="16"
-              h="16"
+              w="100%"
+              h="280px"
               align="center"
               justify="center"
-              borderRadius="full"
+              borderRadius="xl"
               bg="white"
               boxShadow="0 0 20px rgba(0,0,0,0.06)"
-              mb={6}
-              mx="auto"
+              overflow="hidden"
             >
-              <Box fontSize="2xl" color="green.800">
-                <Icon />
-              </Box>
-            </Flex>
-            <Text
-              fontSize="lg"
-              fontWeight="bold"
-              color="green.900"
-              textAlign="center"
-              mb={2}
-            >
-              {title}
-            </Text>
-            <Text
-              fontSize="sm"
-              color="gray.700"
-              textAlign="center"
-              mb={6}
-            >
-              {description}
-            </Text>
-            <Flex justify="center">
-              <IconButton
-                aria-label={`Go to ${title}`}
-                icon={<IoArrowRedoCircleSharp />}
-                variant="ghost"
-                borderRadius="full"
-                border="1px solid #E2E8F0"
-                size="md"
-                _hover={{ bg: 'gray.100' }}
+              <Image
+                src={src}
+                alt={`Mobile App ${idx + 1}`}
+                width={100}
+                height={280}
+                style={{ objectFit: 'contain' }}
               />
             </Flex>
           </Box>
@@ -117,4 +107,3 @@ export default function ApplicationSections() {
     </Box>
   );
 }
-

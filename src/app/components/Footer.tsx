@@ -16,7 +16,7 @@ export default function Footer() {
         gap={{ base: 4, md: 0 }}
       >
         <Text fontSize="sm" color="gray.700" textAlign="center">
-          Copy© {currentYear} GIS PTPN. All Rights Reserved.
+          Copy© {currentYear} GIS PTPN IV. All Rights Reserved.
         </Text>
 
         <HStack spacing={6}>
@@ -25,9 +25,6 @@ export default function Footer() {
           </Link>
           <Link href="#" fontSize="sm" color="gray.700" _hover={{ color: 'green.600' }}>
             Faqs
-          </Link>
-          <Link href="#" fontSize="sm" color="gray.700" _hover={{ color: 'green.600' }}>
-            Food Menu
           </Link>
         </HStack>
       </Flex>

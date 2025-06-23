@@ -82,10 +82,10 @@ export default function HeroSections() {
             lineHeight="1.1"
             mb={6}
           >
-            Bangun Aplikasi dan Jelajahi data GIS
+            PTPN IV DATA GEOSPASIAL
           </Heading>
           <Text fontSize={{ base: "lg", md: "2xl" }} color="#3A3A3A" fontWeight="medium" mb={8}>
-            Anda dapat menganalisis dan menggabungkan dataset menggunakan peta, serta mengembangkan aplikasi web dan mobile baru. Mari capai tujuan kita bersama
+            Menjadi perusahaan agribisnis nasional yang unggul dan berdaya saing kelas dunia serta berkontribusi secara berkesinambungan bagi kemajuan bangsa
           </Text>
           <Stack direction={{ base: "column", sm: "row" }} spacing={6}>
             <InputGroup size="lg">
