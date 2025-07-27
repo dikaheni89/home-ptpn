@@ -25,7 +25,7 @@ export default function Topbar() {
           px={4}
         >
           <Text fontSize="lg" fontWeight="medium">
-            Selamat Datang Di Website Kami {APP_NAME}
+            Selamat Datang Di Geo Palm Dashboard (GPD)
           </Text>
           <HStack spacing={1}>
             <IconButton as="a" href="#" aria-label="Facebook" icon={<FaFacebookF />} variant="ghost" color="white" size={'lg'} _hover={{ bg: "rgba(255,255,255,0.1)" }} />
