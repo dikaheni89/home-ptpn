@@ -3,20 +3,21 @@
 import { Box, SimpleGrid, Text, IconButton, Flex, Link } from '@chakra-ui/react';
 import { IoArrowRedoCircleSharp } from 'react-icons/io5';
 import {
-  FaSeedling,
-  FaMapMarkedAlt,
-  FaBuilding,
-  FaShieldAlt,
-  FaGraduationCap, FaHeartbeat,
+  FaSeedling
 } from 'react-icons/fa';
+import { PiUsersFourLight } from 'react-icons/pi';
+import {GiFertilizerBag} from "react-icons/gi";
+import {BiSolidPhotoAlbum} from "react-icons/bi";
+import {RiSurveyLine} from "react-icons/ri";
+import {SiFireship} from "react-icons/si";
 
 const categories = [
   { name: 'Produksi', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/bcd2b8427964472ea1cd43c0e25a969c', sub: 'Dashboard Produksi PTPN IV', icon: FaSeedling },
-  { name: 'Sensus Hama', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/49ffdb11e83140fcb9f1e5706e6f9181', sub: 'Dashboard Sensus Hama', icon: FaMapMarkedAlt },
-  { name: 'Pemupukan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/42cd39ac71f94d55bd37b212788897a2', sub: 'Dashboard Pemupukan', icon: FaBuilding },
-  { name: 'Album TBM', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6fa3da8b00f341809b6ff6d22986a294', sub: 'Dashboard Album TBM', icon: FaShieldAlt },
-  { name: 'Survey Jalan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/a3a6470bd1a14acb811e78420839edf3', sub: 'Dashboard Survey Jalan', icon: FaGraduationCap },
-  { name: 'Fire Hotspot', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6ee767b22a1a42059b601ab39f82c51d', sub: 'Dashboard Fire Hotspot', icon: FaHeartbeat },
+  { name: 'Sensus Hama', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/49ffdb11e83140fcb9f1e5706e6f9181', sub: 'Dashboard Sensus Hama', icon: PiUsersFourLight },
+  { name: 'Pemupukan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/42cd39ac71f94d55bd37b212788897a2', sub: 'Dashboard Pemupukan', icon: GiFertilizerBag },
+  { name: 'Album TBM', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6fa3da8b00f341809b6ff6d22986a294', sub: 'Dashboard Album TBM', icon: BiSolidPhotoAlbum },
+  { name: 'Survey Jalan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/a3a6470bd1a14acb811e78420839edf3', sub: 'Dashboard Survey Jalan', icon: RiSurveyLine },
+  { name: 'Fire Hotspot', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6ee767b22a1a42059b601ab39f82c51d', sub: 'Dashboard Fire Hotspot', icon: SiFireship },
 ];
 
 export default function ExploreSections() {
