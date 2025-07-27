@@ -9,7 +9,6 @@ import ExploreSections from "@/app/home/widget/ExploreSections";
 import ApplicationSections from "@/app/home/widget/ApplicationSections";
 import Footer from "@/app/components/Footer";
 import UnlockWidget from "@/app/home/widget/UnlockWidget";
-import SponsorSections from "@/app/home/widget/SponsorSections";
 
 export default function Beranda() {
   const [scrolled, setScrolled] = useState(false);
