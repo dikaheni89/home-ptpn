@@ -41,7 +41,6 @@ export default function Beranda() {
         <ExploreSections />
         <ApplicationSections />
         <UnlockWidget />
-        <SponsorSections />
         <Footer />
       </Box>
     </>

@@ -16,7 +16,7 @@ export default function Footer() {
         gap={{ base: 4, md: 0 }}
       >
         <Text fontSize="sm" color="gray.700" textAlign="center">
-          Copy© {currentYear} GIS PTPN IV. All Rights Reserved.
+          Copyright {currentYear} Geo Palm Dashboard (GPD). All Rights Reserved.
         </Text>
 
         <HStack spacing={6}>

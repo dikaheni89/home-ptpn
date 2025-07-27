@@ -20,18 +20,19 @@ const mobileImages = [
 export default function ApplicationSections() {
   return (
     <Box bg="white" py={20} px={{ base: 4, md: 12 }} position="relative" overflow="hidden">
+      {/* LEFT PALM IMAGE */}
       <Box
         position="absolute"
         left={0}
         top={0}
         height="100%"
-        width="auto"
         zIndex={0}
+        display={{ base: 'none', md: 'block' }}
       >
         <Image
           src="/static/images/kelaparight.png"
           alt="Kelapa Left"
-          width={500}
+          width={400}
           height={600}
           style={{
             objectFit: 'contain',
@@ -40,23 +41,25 @@ export default function ApplicationSections() {
         />
       </Box>
 
+      {/* RIGHT PALM IMAGE */}
       <Box
         position="absolute"
         right={0}
         top={0}
         height="100%"
-        width="auto"
         zIndex={0}
+        display={{ base: 'none', md: 'block' }}
       >
         <Image
           src="/static/images/kelaparight.png"
           alt="Kelapa Right"
-          width={500}
+          width={400}
           height={600}
           style={{ objectFit: 'contain' }}
         />
       </Box>
 
+      {/* TEXT SECTION */}
       <Box textAlign="center" mb={12} position="relative" zIndex={1}>
         <Heading
           as="h2"
@@ -64,13 +67,14 @@ export default function ApplicationSections() {
           fontWeight="extrabold"
           color="green.900"
         >
-          Mobile GIS PTPTN IV
+          Geo Palm Mobile (GPM)
         </Heading>
         <Text fontSize="xl" color="green.700" mb={2}>
           dapat di download di Playstore untuk kegiatan survey, tracking, dan monitoring kelapa sawit melalui smartphone.
         </Text>
       </Box>
 
+      {/* IMAGE GRID */}
       <SimpleGrid columns={{ base: 1, md: 2, lg: 5 }} spacing={8} position="relative" zIndex={1}>
         {mobileImages.map((src, idx) => (
           <Box

@@ -21,14 +21,8 @@ import { getBasePath } from '@/libs/utils/getBasePath';
 
 const MENU_ITEMS = [
   { label: 'Home', href: '/' },
-  { label: 'Pemeliharaan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/32f44319bdee416099fb6594ed5bc0eb' },
-  { label: 'Pemupukan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/cb7f9ffbfa9d4985bf3dd4915a556027' },
-  { label: 'Panen', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/88170851d6964583954fca800e1f621b' },
-  { label: 'Produksi', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/bcd2b8427964472ea1cd43c0e25a969c' },
-  { label: 'Hama', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6ee767b22a1a42059b601ab39f82c51d' },
-  { label: 'Hazard', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/fc9971f5f0b64f6f927667bfbc2c8fe7' },
-  { label: 'Survey', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/2dc8b32c6ab8482eb8ae9f600aa39831' },
-  { label: 'Legal', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6fa3da8b00f341809b6ff6d22986a294' },
+  { label: 'Content', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/32f44319bdee416099fb6594ed5bc0eb' },
+  { label: 'Fire Hotspot', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/cb7f9ffbfa9d4985bf3dd4915a556027' },
 ];
 
 export default function Header() {
@@ -51,10 +45,10 @@ export default function Header() {
                 />
                 <Box>
                   <Text fontSize="2xl" fontWeight="bold" color="#0d4531" letterSpacing="-1px">
-                    PTPN IV
+                    Geo Palm Dashboard (GPD)
                   </Text>
                   <Text fontSize="sm" color="gray.600">
-                    PT Perkebunan Nusantara
+                    PT Perkebunan Nusantara IV
                   </Text>
                 </Box>
               </Flex>
