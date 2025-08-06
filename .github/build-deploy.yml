@@ -1,0 +1,36 @@
+name: Build and Deploy
+
+permissions:
+  contents: read # access to check out code and install dependencies
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build static files
+        run: yarn build
+
+      - name: Show output files
+        run: ls -la out/
+
+      - name: Clean target directory
+        run: rm -rf ${{ secrets.DEPLOYMENT_PATH }}/*
+
+      - name: Deploy to Web Directory
+        run: cp -r out/* ${{ secrets.DEPLOYMENT_PATH }}/
