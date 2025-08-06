@@ -17,7 +17,6 @@ import {
 import { FaBars } from 'react-icons/fa';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { getBasePath } from '@/libs/utils/getBasePath';
 
 const MENU_ITEMS = [
   { label: 'Home', href: '/' },
@@ -37,11 +36,12 @@ export default function Header() {
             <Box minW="220px" pr={4}>
               <Flex align="center">
                 <Image
-                  src={getBasePath() + '/static/images/logo.png'}
+                  src={'/static/images/logo.png'}
                   alt="Gadden Logo"
                   width={40}
                   height={40}
                   style={{ marginRight: 8 }}
+                  unoptimized
                 />
                 <Box>
                   <Text fontSize="2xl" fontWeight="bold" color="#0d4531" letterSpacing="-1px">
@@ -100,11 +100,12 @@ export default function Header() {
           <DrawerHeader borderBottomWidth="1px" bg="white" py={6}>
             <Flex align="center">
               <Image
-                src={getBasePath() + '/static/images/logo.png'}
+                src={'/static/images/logo.png'}
                 alt="Gadden Logo"
                 width={40}
                 height={40}
                 style={{ marginRight: 8 }}
+                unoptimized
               />
               <Box>
                 <Text fontSize="sm" fontWeight="bold" color="primary.main" letterSpacing="-1px">

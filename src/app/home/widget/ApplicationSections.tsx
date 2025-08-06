@@ -38,6 +38,7 @@ export default function ApplicationSections() {
             objectFit: 'contain',
             transform: 'scaleX(-1)',
           }}
+          unoptimized
         />
       </Box>
 
@@ -56,6 +57,7 @@ export default function ApplicationSections() {
           width={400}
           height={600}
           style={{ objectFit: 'contain' }}
+          unoptimized
         />
       </Box>
 
@@ -103,6 +105,7 @@ export default function ApplicationSections() {
                 width={100}
                 height={280}
                 style={{ objectFit: 'contain' }}
+                unoptimized
               />
             </Flex>
           </Box>

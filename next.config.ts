@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   outputFileTracing: false, // https://github.com/vercel/next.js/issues/40760
   basePath: process.env.APP_BASE_PATH || '',
   reactStrictMode: false,

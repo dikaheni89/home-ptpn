@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { APP_DESCRIPTION, APP_NAME, APP_OWNER } from "@/config/client-constant";
-import { CSSReset } from "@chakra-ui/react";
-import {getBasePath} from "@/libs/utils/getBasePath";
+import { CSSReset } from "@chakra-ui/react";;
 import {Providers} from "@/app/providers";
 
 export const metadata: Metadata = {
@@ -16,19 +15,19 @@ export const metadata: Metadata = {
   publisher: APP_OWNER,
   icons: [
     {
-      url: `${getBasePath()}/static/favicon-16x16.png`,
+      url: `/static/favicon-16x16.png`,
       type: "image/png",
       sizes: "16x16",
       rel: "icon"
     },
     {
-      url: `${getBasePath()}/static/favicon-32x32.png`,
+      url: `/static/favicon-32x32.png`,
       type: "image/png",
       sizes: "32x32",
       rel: "icon"
     },
     {
-      url: `${getBasePath()}/static/apple-touch-icon.png`,
+      url: `/static/apple-touch-icon.png`,
       type: "image/png",
       sizes: "180x180",
       rel: "apple-touch-icon"

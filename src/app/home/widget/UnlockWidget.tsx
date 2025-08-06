@@ -3,7 +3,6 @@
 import { Box, Flex, Heading, Text, SimpleGrid, Icon, HStack } from "@chakra-ui/react";
 import { FaLeaf } from "react-icons/fa";
 import Image from "next/image";
-import {getBasePath} from "@/libs/utils/getBasePath";
 
 const features = [
   {
@@ -37,11 +36,12 @@ export default function UnlockWidget() {
             overflow="hidden"
           >
             <Image
-              src={getBasePath() + '/static/images/hero.png'}
+              src={'/static/images/hero.png'}
               alt="Visual Hero"
               fill
               style={{ objectFit: "cover" }}
               priority
+              unoptimized
             />
           </Box>
         </Box>

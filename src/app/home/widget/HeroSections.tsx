@@ -12,7 +12,6 @@ import {
   IconButton
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import {getBasePath} from "@/libs/utils/getBasePath";
 import {SearchIcon} from "@chakra-ui/icons";
 
 export default function HeroSections() {
@@ -34,12 +33,13 @@ export default function HeroSections() {
         zIndex={0}
       >
         <Image
-          src={getBasePath() + '/static/images/shape-1.png'}
+          src={'/static/images/shape-1.png'}
           alt="shape left"
           width={300}
           height={300}
           objectFit="cover"
           style={{ width: '100px', height: '300px', objectPosition: 'left' }}
+          unoptimized
         />
       </Box>
       <Box
@@ -52,12 +52,13 @@ export default function HeroSections() {
         transform="scaleX(-1)"
       >
         <Image
-          src={getBasePath() + '/static/images/shape-2.png'}
+          src={'/static/images/shape-2.png'}
           alt="shape right"
           width={300}
           height={300}
           objectFit="cover"
           style={{ width: '80vw', height: '600px', objectPosition: 'left' }}
+          unoptimized
         />
       </Box>
 
@@ -148,11 +149,12 @@ export default function HeroSections() {
             zIndex={2}
           >
             <Image
-              src={getBasePath() + '/static/images/hero.png'}
+              src={'/static/images/hero.png'}
               alt="hero photo"
               fill
               style={{ objectFit: "cover" }}
               priority
+              unoptimized
             />
           </Box>
         </Box>
