@@ -11,11 +11,11 @@ const features = [
   },
   {
     title: "Visualisasikan & Analisis",
-    description: "Sorot pola spasial dan temukan tren",
+    description: "Sorot pola spasial dan temukan trend",
   },
   {
     title: "Membangun",
-    description: "Mengembangkan aplikasi baru menggunakan templat dan API",
+    description: "Mengembangkan aplikasi baru menggunakan template dan API",
   },
   {
     title: "Membagikan",

@@ -48,7 +48,7 @@ export default function Header() {
                     Geo Palm Dashboard (GPD)
                   </Text>
                   <Text fontSize="sm" color="gray.600">
-                    PT Perkebunan Nusantara IV
+                    PT PERKEBUNAN NUSANTARA IV
                   </Text>
                 </Box>
               </Flex>
@@ -112,7 +112,7 @@ export default function Header() {
                   PTPN IV
                 </Text>
                 <Text fontSize="sm" color="#5D6A6A">
-                  PT Perkebunan Nusantara
+                  PT PERKEBUNAN NUSANTARA
                 </Text>
               </Box>
             </Flex>
