@@ -45,7 +45,7 @@ export default function Header() {
                 />
                 <Box>
                   <Text fontSize="2xl" fontWeight="bold" color="#0d4531" letterSpacing="-1px">
-                    Geo Palm Dashboard (GPD)
+                    GeoPalm Dashboard (GPD)
                   </Text>
                   <Text fontSize="sm" color="gray.600">
                     PT PERKEBUNAN NUSANTARA IV

@@ -13,11 +13,11 @@ import {SiFireship} from "react-icons/si";
 
 const categories = [
   { name: 'Dashboard Produksi', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/bcd2b8427964472ea1cd43c0e25a969c', sub: 'Monitoring Produksi', icon: FaSeedling },
-  { name: 'Dashboard Hama & Penyakit', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/49ffdb11e83140fcb9f1e5706e6f9181', sub: 'Early Warning System HPT', icon: PiUsersFourLight },
+  { name: 'Dashboard Hama & Penyakit', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6ee767b22a1a42059b601ab39f82c51d', sub: 'Early Warning System HPT', icon: PiUsersFourLight },
   { name: 'Dashboard Pemupukan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/42cd39ac71f94d55bd37b212788897a2', sub: 'Monitoring Realisasi Pemupukan', icon: GiFertilizerBag },
   { name: 'Dashboard Album TBM', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6fa3da8b00f341809b6ff6d22986a294', sub: 'Monitoring Evaluasi TBM', icon: BiSolidPhotoAlbum },
   { name: 'Dashboard Survey Jalan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/a3a6470bd1a14acb811e78420839edf3', sub: 'Kondisi Jalan Update', icon: RiSurveyLine },
-  { name: 'Dashboard Fire Hotspot', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/6ee767b22a1a42059b601ab39f82c51d', sub: 'Pemantauan Titik Api Areal Kebun', icon: SiFireship },
+  { name: 'Dashboard Fire Hotspot', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/fc9971f5f0b64f6f927667bfbc2c8fe7 ', sub: 'Pemantauan Titik Api Areal Kebun', icon: SiFireship },
 ];
 
 export default function ExploreSections() {

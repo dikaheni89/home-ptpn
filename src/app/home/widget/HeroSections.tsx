@@ -83,7 +83,7 @@ export default function HeroSections() {
             lineHeight="1.1"
             mb={6}
           >
-            Geo Palm Dashboard (GPD)
+            GeoPalm Dashboard (GPD)
           </Heading>
           <Text fontSize={{ base: "lg", md: "2xl" }} color="#3A3A3A" fontWeight="medium" mb={8}>
             Menjadi perusahaan agribisnis nasional yang unggul dan berdaya saing kelas dunia serta berkontribusi secara berkesinambungan bagi kemajuan bangsa
