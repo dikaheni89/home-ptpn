@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Flex, Text, Link, HStack, Divider } from '@chakra-ui/react';
+import { Box, Flex, Text, Divider } from '@chakra-ui/react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,17 +16,8 @@ export default function Footer() {
         gap={{ base: 4, md: 0 }}
       >
         <Text fontSize="sm" color="gray.700" textAlign="center">
-          Copyright {currentYear} GeoPalm Dashboard (GPD). All Rights Reserved.
+          Copyright {currentYear} PT. Perkebunan Nusantara IV. All Rights Reserved.
         </Text>
-
-        <HStack spacing={6}>
-          <Link href="#" fontSize="sm" color="gray.700" _hover={{ color: 'green.600' }}>
-            Setting & Privacy
-          </Link>
-          <Link href="#" fontSize="sm" color="gray.700" _hover={{ color: 'green.600' }}>
-            Faqs
-          </Link>
-        </HStack>
       </Flex>
     </Box>
   );

@@ -19,8 +19,6 @@ import Image from 'next/image';
 import { useRef } from 'react';
 
 const MENU_ITEMS = [
-  { label: 'Home', href: '/' },
-  { label: 'Content', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/32f44319bdee416099fb6594ed5bc0eb' },
   { label: 'GPM Admin Panel', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/cb7f9ffbfa9d4985bf3dd4915a556027' },
 ];
 
