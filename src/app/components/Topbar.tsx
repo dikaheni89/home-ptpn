@@ -1,7 +1,6 @@
 'use client';
 
-import {Box, Flex, HStack, IconButton, Text} from "@chakra-ui/react";
-import {FaFacebookF, FaPinterestP, FaTwitter, FaYoutube} from "react-icons/fa";
+import {Box, Flex, Text} from "@chakra-ui/react";
 
 export default function Topbar() {
   return (
