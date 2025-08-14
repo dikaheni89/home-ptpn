@@ -62,7 +62,7 @@ export default function ApplicationSections() {
       </Box>
 
       {/* TEXT SECTION */}
-      <Box textAlign="center" mb={12} position="relative" px={64} zIndex={1}>
+      <Box textAlign="center" mb={12} position="relative" px={{ base: 0, md: 64 }} zIndex={1}>
         <Heading
           as="h2"
           fontSize={{ base: '2xl', md: '4xl' }}
