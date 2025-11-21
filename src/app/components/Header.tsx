@@ -19,7 +19,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 
 const MENU_ITEMS = [
-  { label: 'GPM Admin Panel', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/cb7f9ffbfa9d4985bf3dd4915a556027' },
+  { label: 'GPM Admin Panel', href: 'https://ispn.ptpn4.or.id/admin-panel/login' },
 ];
 
 export default function Header() {
