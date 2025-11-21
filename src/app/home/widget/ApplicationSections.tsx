@@ -69,10 +69,10 @@ export default function ApplicationSections() {
           fontWeight="extrabold"
           color="green.900"
         >
-          Geo Palm Mobile (GPM)
+          GeoPalm Mobile (GPM)
         </Heading>
         <Text fontSize="xl" color="green.700" mb={2}>
-          Aplikasi Mobile GIS PTPN IV yang dapat di download di Playstore untuk kegiatan survey, tracking, dan monitoring kelapa sawit melalui smartphone.
+          Aplikasi Mobile GIS PTPN IV untuk kegiatan survey, tracking, dan monitoring kelapa sawit melalui smartphone.
         </Text>
       </Box>
 
