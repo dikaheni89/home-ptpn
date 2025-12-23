@@ -18,7 +18,7 @@ const categories = [
   { name: 'Dashboard Monitoring Health', href: 'https://gpd.ptpn4.co.id/app/dashboard/monitoring-health', sub: 'Monitoring Health', icon: BiSolidPhotoAlbum },
   { name: 'Dashboard Infrastruktur', href: 'https://gpd.ptpn4.co.id/app/dashboard/status-jalan', sub: 'Kondisi Jalan', icon: RiSurveyLine },
   { name: 'Dashboard Fire Hotspot', href: 'https://gpd.ptpn4.co.id/app/dashboard/fire-hotspot ', sub: 'Pemantauan Titik Api Areal Kebun', icon: SiFireship },
-  { name: 'Dashboard Album TBM', href: 'https://gpd.ptpn4.co.id/app/dashboard/fire-hotspot ', sub: 'Album TBM', icon: BiSolidPhotoAlbum },
+  { name: 'Dashboard Album TBM', href: 'https://gpd.ptpn4.co.id/app/dashboard/album-tbm', sub: 'Album TBM', icon: BiSolidPhotoAlbum },
 ];
 
 export default function ExploreSections() {
