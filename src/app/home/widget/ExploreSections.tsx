@@ -13,10 +13,10 @@ import {SiFireship} from "react-icons/si";
 
 const categories = [
   { name: 'Dashboard Produksi', href: 'https://gpd.ptpn4.co.id/app/dashboard/produksi', sub: 'Monitoring Produksi', icon: FaSeedling },
-  { name: 'Dashboard Hama & Penyakit', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/a93fa9fa4d804585aee1e68554ae1750', sub: 'Early Warning System HPT', icon: PiUsersFourLight },
+  { name: 'Dashboard Hama & Penyakit', href: 'https://gpd.ptpn4.co.id/app/dashboard/protection', sub: 'Early Warning System HPT', icon: PiUsersFourLight },
   { name: 'Dashboard Pemupukan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/cb7f9ffbfa9d4985bf3dd4915a556027', icon: GiFertilizerBag },
   { name: 'Dashboard Monitoring Health', href: 'https://gpd.ptpn4.co.id/app/dashboard/monitoring-health', sub: 'Monitoring Health', icon: BiSolidPhotoAlbum },
-  { name: 'Dashboard Infrastruktur', href: 'https://gpd.ptpn4.co.id/app/dashboard/status-jalan', sub: 'Kondisi Jalan', icon: RiSurveyLine },
+  { name: 'Dashboard Infrastruktur', href: 'https://gpd.ptpn4.co.id/app/dashboard/jalan', sub: 'Kondisi Jalan', icon: RiSurveyLine },
   { name: 'Dashboard Fire Hotspot', href: 'https://gpd.ptpn4.co.id/app/dashboard/fire-hotspot ', sub: 'Pemantauan Titik Api Areal Kebun', icon: SiFireship },
   { name: 'Dashboard Album TBM', href: 'https://gpd.ptpn4.co.id/app/dashboard/album-tbm', sub: 'Album TBM', icon: BiSolidPhotoAlbum },
 ];
