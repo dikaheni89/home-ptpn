@@ -10,6 +10,7 @@ import {GiFertilizerBag} from "react-icons/gi";
 import {BiSolidPhotoAlbum} from "react-icons/bi";
 import {RiSurveyLine} from "react-icons/ri";
 import {SiFireship} from "react-icons/si";
+import { FiUpload } from 'react-icons/fi';
 
 const categories = [
   { name: 'Dashboard Produksi', href: 'https://gpd.ptpn4.co.id/app/dashboard/produksi', sub: 'Monitoring Produksi', icon: FaSeedling },
@@ -19,6 +20,7 @@ const categories = [
   { name: 'Dashboard Infrastruktur', href: 'https://gpd.ptpn4.co.id/app/dashboard/jalan', sub: 'Kondisi Jalan', icon: RiSurveyLine },
   { name: 'Dashboard Fire Hotspot', href: 'https://gpd.ptpn4.co.id/app/dashboard/fire-hotspot ', sub: 'Pemantauan Titik Api Areal Kebun', icon: SiFireship },
   { name: 'Dashboard Album TBM', href: 'https://gpd.ptpn4.co.id/app/dashboard/album-tbm', sub: 'Album TBM', icon: BiSolidPhotoAlbum },
+  { name: 'Upload Data', href: 'https://gpd.ptpn4.co.id/app/dashboard/upload-data', sub: 'Upload data raster & vector', icon: FiUpload },
 ];
 
 export default function ExploreSections() {
