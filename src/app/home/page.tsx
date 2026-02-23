@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "@/app/components/Header";
 import Topbar from "@/app/components/Topbar";
+import FadeInSection from "@/app/components/FadeInSection";
 import HeroSections from "@/app/home/widget/HeroSections";
 import ExploreSections from "@/app/home/widget/ExploreSections";
 import ApplicationSections from "@/app/home/widget/ApplicationSections";
@@ -36,11 +37,21 @@ export default function Beranda() {
         <Header />
       </Box>
       <Box pt={scrolled ? "80px" : 0}>
-        <HeroSections />
-        <ExploreSections />
-        <ApplicationSections />
-        <UnlockWidget />
-        <Footer />
+        <FadeInSection offsetY={20}>
+          <HeroSections />
+        </FadeInSection>
+        <FadeInSection>
+          <ExploreSections />
+        </FadeInSection>
+        <FadeInSection>
+          <ApplicationSections />
+        </FadeInSection>
+        <FadeInSection>
+          <UnlockWidget />
+        </FadeInSection>
+        <FadeInSection offsetY={16}>
+          <Footer />
+        </FadeInSection>
       </Box>
     </>
   );
