@@ -12,14 +12,18 @@ import {
   DrawerHeader,
   DrawerBody,
   VStack,
-  useDisclosure, Link,
+  useDisclosure,
+  Link,
 } from '@chakra-ui/react';
 import { FaBars } from 'react-icons/fa';
+import { MdAdminPanelSettings } from 'react-icons/md';
+import { FiUploadCloud } from 'react-icons/fi';
 import Image from 'next/image';
 import { useRef } from 'react';
 
 const MENU_ITEMS = [
-  { label: 'GPM Admin Panel', href: 'https://ispn.ptpn4.or.id/admin-panel/login' },
+  { label: 'GPM Admin Panel', href: 'https://ispn.ptpn4.or.id/admin-panel/login', icon: MdAdminPanelSettings, desc: 'Kelola panel admin' },
+  { label: 'Upload Data', href: 'https://gpd.ptpn4.co.id/app/dashboard/upload-data', icon: FiUploadCloud, desc: 'Raster & vector' },
 ];
 
 export default function Header() {
@@ -30,7 +34,7 @@ export default function Header() {
     <>
       <Box as="header" w="100%" bg="white" boxShadow="sm" position="relative" zIndex={10}>
         <Box bg="primary.50" py={4} borderBottom="1px solid #ededed">
-          <Flex maxW="7xl" mx="auto" align="center" px={4} justify="space-between">
+          <Flex maxW="7xl" mx="auto" align="center" px={{ base: 4, md: 6, lg: 8 }} justify="space-between">
             <Box minW="220px" pr={4}>
               <Flex align="center">
                 <Image
@@ -52,20 +56,45 @@ export default function Header() {
               </Flex>
             </Box>
 
-            <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
-              {MENU_ITEMS.map((item, index) => (
-                <Link key={index} target="_blank" href={item.href}>
-                  <Text
-                    as="span"
-                    fontWeight="semibold"
-                    textDecoration="none"
-                    cursor="pointer"
-                    _hover={{ color: 'primary.main', textDecoration: 'none' }}
+            <HStack spacing={3} display={{ base: 'none', md: 'flex' }}>
+              {MENU_ITEMS.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    _hover={{ textDecoration: 'none' }}
                   >
-                    {item.label}
-                  </Text>
-                </Link>
-              ))}
+                    <Flex
+                      align="center"
+                      gap={2}
+                      px={4}
+                      py={2.5}
+                      borderRadius="xl"
+                      bg="white"
+                      border="1.5px solid"
+                      borderColor="gray.200"
+                      boxShadow="sm"
+                      transition="all 0.2s"
+                      _hover={{
+                        borderColor: 'primary.400',
+                        bg: 'primary.50',
+                        boxShadow: 'md',
+                        transform: 'translateY(-1px)',
+                      }}
+                    >
+                      <Box color="primary.600" fontSize="lg">
+                        <Icon />
+                      </Box>
+                      <Text fontWeight="semibold" color="gray.800" fontSize="sm">
+                        {item.label}
+                      </Text>
+                    </Flex>
+                  </Link>
+                );
+              })}
             </HStack>
 
             <IconButton
@@ -116,24 +145,46 @@ export default function Header() {
             </Flex>
           </DrawerHeader>
           <DrawerBody>
-            <VStack spacing={6} mt={6} align="stretch">
-              <VStack align="stretch" spacing={4}>
-                {MENU_ITEMS.map((item) => (
-                  <Link key={item.label} target="_blank" href={item.href}>
-                    <Flex  align="center" justify="space-between" py={1} px={1} borderBottom="1px solid #efefef">
-                      <Text
-                        fontWeight="bold"
-                        fontSize="md"
-                        cursor="pointer"
-                        textDecoration="none"
-                        _hover={{ color: 'primary.main', textDecoration: 'none' }}
+            <VStack spacing={3} mt={4} align="stretch">
+              {MENU_ITEMS.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" _hover={{ textDecoration: 'none' }}>
+                    <Flex
+                      align="center"
+                      gap={3}
+                      p={4}
+                      borderRadius="xl"
+                      bg="gray.50"
+                      border="1px solid"
+                      borderColor="gray.200"
+                      transition="all 0.2s"
+                      _hover={{ bg: 'primary.50', borderColor: 'primary.200' }}
+                    >
+                      <Flex
+                        w={10}
+                        h={10}
+                        align="center"
+                        justify="center"
+                        borderRadius="lg"
+                        bg="white"
+                        boxShadow="sm"
+                        color="primary.600"
                       >
-                        {item.label}
-                      </Text>
+                        <Icon size={20} />
+                      </Flex>
+                      <Box flex={1}>
+                        <Text fontWeight="bold" fontSize="md" color="gray.800">
+                          {item.label}
+                        </Text>
+                        <Text fontSize="xs" color="gray.500" mt={0.5}>
+                          {item.desc}
+                        </Text>
+                      </Box>
                     </Flex>
                   </Link>
-                ))}
-              </VStack>
+                );
+              })}
             </VStack>
           </DrawerBody>
         </DrawerContent>

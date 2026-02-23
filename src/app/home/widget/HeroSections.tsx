@@ -1,18 +1,24 @@
 'use client';
 
+import type { FormEvent } from 'react';
 import {
   Box,
   Flex,
   Heading,
   Text,
-  Stack,
   InputGroup,
   Input,
   InputRightElement,
   IconButton
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import {SearchIcon} from "@chakra-ui/icons";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.12, duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] } }),
+};
 
 export default function HeroSections() {
   return (
@@ -69,51 +75,78 @@ export default function HeroSections() {
         zIndex={1}
         align="center"
         justify="space-between"
-        py={{ base: 12, md: 24 }}
-        px={{ base: 4, md: 12 }}
+        py={{ base: 14, md: 28 }}
+        px={{ base: 4, md: 10, lg: 12 }}
         direction={{ base: "column", md: "row" }}
-        gap={12}
+        gap={{ base: 10, md: 16 }}
       >
-        <Box flex="1" minW={0}>
-          <Heading
-            as="h1"
-            fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
-            color="#114034"
-            fontWeight="extrabold"
-            lineHeight="1.1"
-            mb={6}
-          >
-            GeoPalm Dashboard (GPD)
-          </Heading>
-          <Text fontSize={{ base: "lg", md: "2xl" }} color="#3A3A3A" fontWeight="medium" mb={8}>
-            Menjadi perusahaan agribisnis nasional yang unggul dan berdaya saing kelas dunia serta berkontribusi secara berkesinambungan bagi kemajuan bangsa
-          </Text>
-          <Stack direction={{ base: "column", sm: "row" }} spacing={6}>
-            <InputGroup size="lg">
-              <Input
-                placeholder="Cari data GIS..."
-                bg="white"
-                color="gray.800"
-                border="1.5px solid #E5E5E5"
-                borderRadius="2xl"
-                px={6}
-                py={6}
-                _placeholder={{ color: "gray.500" }}
-              />
-              <InputRightElement height="100%" px={4}>
-                <IconButton
-                  aria-label="Cari"
-                  icon={<SearchIcon />}
-                  size="lg"
-                  colorScheme="green"
-                  bg="#114034"
-                  color="white"
+        <Box flex="1" minW={0} maxW={{ md: "520px" }}>
+          <motion.div custom={0} variants={fadeUp} initial="initial" animate="animate">
+            <Text
+              fontSize="xs"
+              fontWeight="semibold"
+              color="#114034"
+              letterSpacing="wider"
+              textTransform="uppercase"
+              mb={3}
+            >
+              Platform GIS PTPN IV
+            </Text>
+            <Heading
+              as="h1"
+              fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
+              color="#114034"
+              fontWeight="extrabold"
+              lineHeight="1.15"
+              letterSpacing="-0.02em"
+              mb={5}
+            >
+              GeoPalm Dashboard (GPD)
+            </Heading>
+          </motion.div>
+          <motion.div custom={1} variants={fadeUp} initial="initial" animate="animate">
+            <Text
+              fontSize={{ base: "md", md: "lg" }}
+              color="#3A3A3A"
+              fontWeight="medium"
+              lineHeight="1.65"
+              mb={8}
+            >
+              Menjadi perusahaan agribisnis nasional yang unggul dan berdaya saing kelas dunia serta berkontribusi secara berkesinambungan bagi kemajuan bangsa.
+            </Text>
+          </motion.div>
+          <motion.div custom={2} variants={fadeUp} initial="initial" animate="animate">
+            <Box
+              as="form"
+              onSubmit={(e: FormEvent) => e.preventDefault()}
+              maxW="420px"
+            >
+              <InputGroup size="lg">
+                <Input
+                  placeholder="Cari data GIS..."
+                  bg="white"
+                  color="gray.800"
+                  border="1.5px solid #E5E5E5"
                   borderRadius="xl"
-                  _hover={{ bg: "#0d332a" }}
+                  px={5}
+                  py={6}
+                  _placeholder={{ color: "gray.500" }}
+                  _focus={{ borderColor: "#114034", boxShadow: "0 0 0 1px #114034" }}
                 />
-              </InputRightElement>
-            </InputGroup>
-          </Stack>
+                <InputRightElement height="100%" px={3}>
+                  <IconButton
+                    aria-label="Cari"
+                    icon={<SearchIcon />}
+                    size="lg"
+                    bg="#114034"
+                    color="white"
+                    borderRadius="lg"
+                    _hover={{ bg: "#0d332a" }}
+                  />
+                </InputRightElement>
+              </InputGroup>
+            </Box>
+          </motion.div>
         </Box>
 
         <Box
@@ -122,41 +155,46 @@ export default function HeroSections() {
           alignItems="center"
           justifyContent="center"
           position="relative"
-          minW={{ base: "240px", md: "420px" }}
-          minH={{ base: "240px", md: "420px" }}
-          w={{ base: "90vw", md: "460px" }}
-          h={{ base: "90vw", md: "460px" }}
+          minW={{ base: "260px", md: "400px" }}
+          minH={{ base: "260px", md: "400px" }}
         >
           <Box
             position="absolute"
-            right="-40px"
-            top="-48px"
-            w={{ base: "260px", md: "410px" }}
-            h={{ base: "260px", md: "410px" }}
+            right={{ base: "-48px", md: "-72px" }}
+            top={{ base: "-16px", md: "-32px" }}
+            w={{ base: "220px", md: "320px" }}
+            h={{ base: "220px", md: "320px" }}
             borderTopRightRadius="100%"
             borderBottomRightRadius="100%"
             borderTopLeftRadius="0"
             borderBottomLeftRadius="0"
             bg="#F2D3A2"
-            zIndex={1}
+            zIndex={0}
           />
-          <Box
-            position="relative"
-            borderRadius="full"
-            overflow="hidden"
-            w={{ base: "240px", md: "380px" }}
-            h={{ base: "240px", md: "380px" }}
-            zIndex={2}
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [-4, 4, -4] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           >
-            <Image
-              src={'/static/images/hero.png'}
-              alt="hero photo"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              unoptimized
-            />
-          </Box>
+            <Box
+              position="relative"
+              borderRadius="2xl"
+              overflow="hidden"
+              w={{ base: "260px", md: "360px" }}
+              h={{ base: "260px", md: "360px" }}
+              zIndex={2}
+              boxShadow="0 25px 50px -12px rgba(17, 64, 52, 0.15)"
+            >
+              <Image
+                src={'/static/images/hero.png'}
+                alt="hero photo"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+                unoptimized
+              />
+            </Box>
+          </motion.div>
         </Box>
       </Flex>
     </Box>
