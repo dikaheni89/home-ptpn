@@ -12,6 +12,7 @@ import {GiFertilizerBag} from "react-icons/gi";
 import {BiSolidPhotoAlbum} from "react-icons/bi";
 import {RiSurveyLine} from "react-icons/ri";
 import {SiFireship} from "react-icons/si";
+import { FaHandshake } from 'react-icons/fa';
 
 const categories = [
   { name: 'Dashboard Produksi', href: 'https://gpd.ptpn4.co.id/app/dashboard/produksi', sub: 'Monitoring Produksi', icon: FaSeedling },
@@ -21,6 +22,7 @@ const categories = [
   { name: 'Dashboard Infrastruktur', href: 'https://gpd.ptpn4.co.id/app/dashboard/jalan', sub: 'Kondisi Jalan', icon: RiSurveyLine },
   { name: 'Dashboard Fire Hotspot', href: 'https://gpd.ptpn4.co.id/app/dashboard/fire-hotspot ', sub: 'Pemantauan Titik Api Areal Kebun', icon: SiFireship },
   { name: 'Dashboard Album TBM', href: 'https://gpd.ptpn4.co.id/app/dashboard/album-tbm', sub: 'Album TBM', icon: BiSolidPhotoAlbum },
+  { name: 'Dashboard Kemitraan Sawit Rakyat', href: 'https://gpd.ptpn4.co.id/app/dashboard/kemitraan', sub: 'Kemitraan Sawit Rakyat', icon: FaHandshake },
 ];
 
 export default function ExploreSections() {
@@ -107,7 +109,8 @@ export default function ExploreSections() {
                     bg="white"
                     borderRadius="xl"
                     p={6}
-                    minH="160px"
+                    h="180px"
+                    minH="180px"
                     boxShadow="sm"
                     border="1px solid"
                     borderColor="gray.100"
@@ -116,10 +119,11 @@ export default function ExploreSections() {
                     _hover={{ boxShadow: 'lg', transform: 'translateY(-4px)', borderColor: 'gray.200' }}
                   >
                     <Flex justify="space-between" align="flex-start" h="100%">
-                      <Flex direction="column" gap={4} flex={1}>
+                      <Flex direction="column" gap={4} flex={1} minW={0}>
                         <Box
                           w={12}
                           h={12}
+                          flexShrink={0}
                           borderRadius="xl"
                           bg="#114034"
                           color="white"
@@ -132,8 +136,8 @@ export default function ExploreSections() {
                         >
                           <Icon />
                         </Box>
-                        <Box>
-                          <Text fontSize="md" fontWeight="bold" color="#114034" mb={1}>
+                        <Box minW={0} flex={1}>
+                          <Text fontSize="md" fontWeight="bold" color="#114034" mb={1} noOfLines={2} lineHeight="tight">
                             {name}
                           </Text>
                           <Text fontSize="xs" color="gray.600" lineHeight="1.4">
