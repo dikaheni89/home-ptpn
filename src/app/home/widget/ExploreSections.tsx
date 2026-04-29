@@ -17,7 +17,7 @@ import { FaHandshake } from 'react-icons/fa';
 const categories = [
   { name: 'Dashboard Produksi', href: 'https://gpd.ptpn4.co.id/app/dashboard/produksi', sub: 'Monitoring Produksi', icon: FaSeedling },
   { name: 'Dashboard Hama & Penyakit', href: 'https://gpd.ptpn4.co.id/app/dashboard/protection', sub: 'Early Warning System HPT', icon: PiUsersFourLight },
-  { name: 'Dashboard Pemupukan', href: 'https://gis.ptpn4.or.id/portal/apps/opsdashboard/index.html#/cb7f9ffbfa9d4985bf3dd4915a556027', icon: GiFertilizerBag },
+  { name: 'Dashboard Pemupukan', href: 'https://gpd.ptpn4.co.id/app/dashboard/pemupukan', icon: GiFertilizerBag },
   { name: 'Dashboard Monitoring Health', href: 'https://gpd.ptpn4.co.id/app/dashboard/monitoring-health', sub: 'Monitoring Health', icon: BiSolidPhotoAlbum },
   { name: 'Dashboard Infrastruktur', href: 'https://gpd.ptpn4.co.id/app/dashboard/jalan', sub: 'Kondisi Jalan', icon: RiSurveyLine },
   { name: 'Dashboard Fire Hotspot', href: 'https://gpd.ptpn4.co.id/app/dashboard/fire-hotspot ', sub: 'Pemantauan Titik Api Areal Kebun', icon: SiFireship },
